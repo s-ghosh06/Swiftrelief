@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.swiftrelief.LoginController"
+            prefWidth="400" prefHeight="300">
+
+    <children>
+        <VBox alignment="CENTER" spacing="15" AnchorPane.topAnchor="30" AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30">
+            <children>
+                <Label text="SwiftRelief Login" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+                <TextField fx:id="usernameField" promptText="Username" />
+                <PasswordField fx:id="passwordField" promptText="Password" />
+                <Button text="Login" onAction="#handleLogin" prefWidth="100" />
+                <Button text="Create Admin" onAction="#openCreateAdmin" styleClass="action-button" />
+                <Label fx:id="messageLabel" textFill="red" />
+            </children>
+        </VBox>
+    </children>
+    <padding><Insets top="20" left="20" right="20" bottom="20" /></padding>
+</AnchorPane>

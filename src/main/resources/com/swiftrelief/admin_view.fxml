@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.swiftrelief.AdminController"
+            prefWidth="400" prefHeight="350"
+            style="-fx-background-color: #F5F6FA;">
+
+    <children>
+        <VBox alignment="CENTER" spacing="12" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+            <Label text="Create Admin Account" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <TextField fx:id="usernameField" promptText="Enter username" />
+            <PasswordField fx:id="passwordField" promptText="Enter password" />
+            <PasswordField fx:id="confirmPasswordField" promptText="Confirm password" />
+            <Button text="Create Admin" onAction="#handleCreateAdmin" styleClass="action-button"/>
+            <Label fx:id="statusLabel" textFill="red" />
+        </VBox>
+    </children>
+</AnchorPane>
