@@ -9,8 +9,16 @@ public class DBUtil {
     private static final String USER = "root";
     private static final String PASSWORD = "Ghosh06"; // <-- your MySQL password
 
-    public static Connection getConnection() throws SQLException {
-        System.out.println("[DBUtil] Connecting to database...");
-        return DriverManager.getConnection(URL, USER, PASSWORD);
+    public static Connection getConnection() {
+        Connection conn = null;
+        try {
+            System.out.println("[DBUtil] Attempting to connect to database...");
+            conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            System.out.println("[DBUtil] Connection established successfully.");
+        } catch (SQLException e) {
+            System.err.println("[DBUtil] Database connection failed!");
+            e.printStackTrace();
+        }
+        return conn;
     }
 }
